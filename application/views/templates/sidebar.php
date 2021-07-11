@@ -105,7 +105,7 @@
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="<?= base_url('profilku') ?>" aria-expanded="false"><i class="fas fa-user-circle"></i><span class="hide-menu">Profil Guru</span></a>
                     </li>
 
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-library-books"></i><span class="hide-menu">Penilaian Kriteria</span></a>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark" href="<?= base_url('penilaian/') ?>" aria-expanded="false"><i class="mdi mdi-library-books"></i><span class="hide-menu">Penilaian Kriteria</span></a>
                     </li>
 
                     <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-animation"></i><span class="hide-menu">Penilaian</span></a>

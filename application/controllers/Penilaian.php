@@ -56,6 +56,7 @@ WHERE tbl_alternatif.id_walikelas = '$nip'");
             "c3"=>$c3->row(),
             "c4"=>$c4->row(),
             "dataNilai"=>$this->db->get('tbl_nilai_kriteria')->result(),
+            "dataPeriode"=>$this->db->get('tbl_periode')->result(),
             "periodeku" => $this->db->get_where('tbl_periode', ['status'=> 1])->row(),
             "judul"=>'Kriteria | Aplikasi Siswa Bermasalah',
             "session"=>$this->db->get_where('tbl_user', ['username' =>

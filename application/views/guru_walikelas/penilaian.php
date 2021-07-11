@@ -83,7 +83,7 @@
                     <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header bg-primary">
-                      <h6 class="modal-title"><font color='white'>Pilih Alumni yang Dinilai</font></h6>
+                      <h6 class="modal-title"><font color='white'>Pilih Mahasiswa yang Dinilai : </font></h6>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -95,8 +95,11 @@
 <fieldset class="form-group floating-label-form-group">
                           <label for="email">Periode Penilaian</label>
                           <select name="id_periode" id="select" required readonly class="custom-select">
-                  <option value="<?php echo $periodeku->id_periode ?>"><?php echo $periodeku->tahun_akademik ?> - <?php echo $periodeku->semester ?></option>
-                  
+
+                  <?php foreach ($dataPeriode as $p): ?>
+                  <option value="<?php echo $p->id_periode ?>"><?php echo $p->tahun_akademik ?> - <?php echo $p->semester ?></option>
+                  <?php endforeach; ?>
+
                 </select>
                         </fieldset>
 
