@@ -111,8 +111,8 @@
 
                $nilai_normalisasi_c1 = number_format($s->nilai_c1/$nn_c1,3);
                $nilai_normalisasi_c2 = number_format($s->nilai_c2/$nn_c2,3);
-               $nilai_normalisasi_c3 = number_format($s->nilai_c2/$nn_c3,3);
-               $nilai_normalisasi_c4 = number_format($s->nilai_c2/$nn_c4,3);
+               $nilai_normalisasi_c3 = number_format($s->nilai_c3/$nn_c3,3);
+               $nilai_normalisasi_c4 = number_format($s->nilai_c4/$nn_c4,3);
            ?>
                                     <tr>
                                     <td><?php echo $s->nis ?></td>
@@ -163,15 +163,15 @@
 
           <?php
 
-          $nilai_normalisasi_c1_1 = number_format($s->nilai_c1/$nn_c1,3);
-               $nilai_normalisasi_c2_1 = number_format($s->nilai_c2/$nn_c2,3);
-               $nilai_normalisasi_c3_1 = number_format($s->nilai_c2/$nn_c3,3);
-               $nilai_normalisasi_c4_1 = number_format($s->nilai_c2/$nn_c4,3);
+               $nilai_normalisasi_c1 = number_format($s->nilai_c1/$nn_c1,3);
+               $nilai_normalisasi_c2 = number_format($s->nilai_c2/$nn_c2,3);
+               $nilai_normalisasi_c3 = number_format($s->nilai_c3/$nn_c3,3);
+               $nilai_normalisasi_c4 = number_format($s->nilai_c4/$nn_c4,3);
 
-               $nilai_normalisasi_terbobot_c1 = number_format($nilai_normalisasi_c1_1/$nn_c1,3);
-               $nilai_normalisasi_terbobot_c2 = number_format($nilai_normalisasi_c2_1/$nn_c2,3);
-               $nilai_normalisasi_terbobot_c3 = number_format($nilai_normalisasi_c3_1/$nn_c3,3);
-               $nilai_normalisasi_terbobot_c4 = number_format($nilai_normalisasi_c4_1/$nn_c4,3);
+               $nilai_normalisasi_terbobot_c1 = number_format($nilai_normalisasi_c1*$c1->bobot,3);
+               $nilai_normalisasi_terbobot_c2 = number_format($nilai_normalisasi_c2*$c2->bobot,3);
+               $nilai_normalisasi_terbobot_c3 = number_format($nilai_normalisasi_c3*$c3->bobot,3);
+               $nilai_normalisasi_terbobot_c4 = number_format($nilai_normalisasi_c4*$c4->bobot,3);
 
                if($max1 > $nilai_normalisasi_terbobot_c1){
                   $max1 = $max1;
@@ -240,6 +240,9 @@
                                 </tbody>
                                 
                             </table>
+                            <!-- <?php  echo $nn_c1?>
+                                         <?php echo $nilai_normalisasi_c1_1 ?><br>
+                                         <?php echo $nilai_normalisasi_terbobot_c1 ?> -->
                         </div>
 
 
@@ -315,13 +318,13 @@
 
           $nilai_normalisasi_c1_2 = number_format($s->nilai_c1/$nn_c1,3);
                $nilai_normalisasi_c2_2 = number_format($s->nilai_c2/$nn_c2,3);
-               $nilai_normalisasi_c3_2 = number_format($s->nilai_c2/$nn_c3,3);
-               $nilai_normalisasi_c4_2 = number_format($s->nilai_c2/$nn_c4,3);
+               $nilai_normalisasi_c3_2 = number_format($s->nilai_c3/$nn_c3,3);
+               $nilai_normalisasi_c4_2 = number_format($s->nilai_c4/$nn_c4,3);
 
-               $nilai_normalisasi_terbobot_c1_1 = number_format($nilai_normalisasi_c1_2/$nn_c1,3);
-               $nilai_normalisasi_terbobot_c2_1 = number_format($nilai_normalisasi_c2_2/$nn_c2,3);
-               $nilai_normalisasi_terbobot_c3_1 = number_format($nilai_normalisasi_c3_2/$nn_c3,3);
-               $nilai_normalisasi_terbobot_c4_1 = number_format($nilai_normalisasi_c4_2/$nn_c4,3);
+               $nilai_normalisasi_terbobot_c1_1 = number_format($nilai_normalisasi_c1_2*$c1->bobot,3);
+               $nilai_normalisasi_terbobot_c2_1 = number_format($nilai_normalisasi_c2_2*$c2->bobot,3);
+               $nilai_normalisasi_terbobot_c3_1 = number_format($nilai_normalisasi_c3_2*$c3->bobot,3);
+               $nilai_normalisasi_terbobot_c4_1 = number_format($nilai_normalisasi_c4_2*$c4->bobot,3);
 
                $Dplus = number_format(sqrt(
                              (pow($max1-$nilai_normalisasi_terbobot_c1_1,2)) +
@@ -381,13 +384,13 @@
 
           $nilai_normalisasi_c1_2 = number_format($s->nilai_c1/$nn_c1,3);
                $nilai_normalisasi_c2_2 = number_format($s->nilai_c2/$nn_c2,3);
-               $nilai_normalisasi_c3_2 = number_format($s->nilai_c2/$nn_c3,3);
-               $nilai_normalisasi_c4_2 = number_format($s->nilai_c2/$nn_c4,3);
+               $nilai_normalisasi_c3_2 = number_format($s->nilai_c3/$nn_c3,3);
+               $nilai_normalisasi_c4_2 = number_format($s->nilai_c4/$nn_c4,3);
 
-               $nilai_normalisasi_terbobot_c1_1 = number_format($nilai_normalisasi_c1_2/$nn_c1,3);
-               $nilai_normalisasi_terbobot_c2_1 = number_format($nilai_normalisasi_c2_2/$nn_c2,3);
-               $nilai_normalisasi_terbobot_c3_1 = number_format($nilai_normalisasi_c3_2/$nn_c3,3);
-               $nilai_normalisasi_terbobot_c4_1 = number_format($nilai_normalisasi_c4_2/$nn_c4,3);
+               $nilai_normalisasi_terbobot_c1_1 = number_format($nilai_normalisasi_c1_2*$c1->bobot,3);
+               $nilai_normalisasi_terbobot_c2_1 = number_format($nilai_normalisasi_c2_2*$c2->bobot,3);
+               $nilai_normalisasi_terbobot_c3_1 = number_format($nilai_normalisasi_c3_2*$c3->bobot,3);
+               $nilai_normalisasi_terbobot_c4_1 = number_format($nilai_normalisasi_c4_2*$c4->bobot,3);
 
                $Dplus = number_format(sqrt(
                              (pow($max1-$nilai_normalisasi_terbobot_c1_1,2)) +
@@ -476,13 +479,13 @@ if( $('#rank').length > 0 ){
 
           $nilai_normalisasi_c1_2 = number_format($s->nilai_c1/$nn_c1,3);
                $nilai_normalisasi_c2_2 = number_format($s->nilai_c2/$nn_c2,3);
-               $nilai_normalisasi_c3_2 = number_format($s->nilai_c2/$nn_c3,3);
-               $nilai_normalisasi_c4_2 = number_format($s->nilai_c2/$nn_c4,3);
+               $nilai_normalisasi_c3_2 = number_format($s->nilai_c3/$nn_c3,3);
+               $nilai_normalisasi_c4_2 = number_format($s->nilai_c4/$nn_c4,3);
 
-               $nilai_normalisasi_terbobot_c1_1 = number_format($nilai_normalisasi_c1_2/$nn_c1,3);
-               $nilai_normalisasi_terbobot_c2_1 = number_format($nilai_normalisasi_c2_2/$nn_c2,3);
-               $nilai_normalisasi_terbobot_c3_1 = number_format($nilai_normalisasi_c3_2/$nn_c3,3);
-               $nilai_normalisasi_terbobot_c4_1 = number_format($nilai_normalisasi_c4_2/$nn_c4,3);
+               $nilai_normalisasi_terbobot_c1_1 = number_format($nilai_normalisasi_c1_2*$c1->bobot,3);
+               $nilai_normalisasi_terbobot_c2_1 = number_format($nilai_normalisasi_c2_2*$c2->bobot,3);
+               $nilai_normalisasi_terbobot_c3_1 = number_format($nilai_normalisasi_c3_2*$c3->bobot,3);
+               $nilai_normalisasi_terbobot_c4_1 = number_format($nilai_normalisasi_c4_2*$c4->bobot,3);
 
                $Dplus = number_format(sqrt(
                              (pow($max1-$nilai_normalisasi_terbobot_c1_1,2)) +
